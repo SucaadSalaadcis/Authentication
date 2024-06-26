@@ -22,7 +22,7 @@ app.use(express.json());
 
 // we are using static file 
 app.use("/", express.static(path.join(__dirname, "public")))
-app.get("/", require("./routes/root"));
+app.use("/", require("./routes/root"));
 
 // path ka asameystey mid an ahyn hdi la ado
 app.all("*",(req, res) => {
